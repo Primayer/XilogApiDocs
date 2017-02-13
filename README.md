@@ -8,10 +8,10 @@ The Primayer API provides access to the raw data recorded by the Xilog logger. T
 
 # Methods
 
-- [*getdata*](#getdata-options): Returns data for logger channel specified by date time range.
-- [*getheader*](#getheader-options): Returns header data for logger channel.
-- [*getnewdata*](#getnewdata-options): Returns last batch of channel data sent from logger.
-- [*confirmdownload*](#confirmdownload-options): Returns the status code of last transaction sent from logger.
+- [*getdata*](#getdata): Returns data for logger channel specified by date time range.
+- [*getheader*](#getheader): Returns header data for logger channel.
+- [*getnewdata*](#getnewdata): Returns last batch of channel data sent from logger.
+- [*confirmdownload*](#confirmdownload): Returns the status code of last transaction sent from logger.
 
 # API
 
