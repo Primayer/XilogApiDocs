@@ -20,7 +20,7 @@ The Primayer API provides access to the raw data recorded by the Xilog logger. T
 ## getdata(siteID, channelID, token, startDate, endDate, timeWindowStart, timeWindowEnd)
 
 ##### Purpose
-Accepts a firebase configuration object as the first argument and an optional 'name' for the app as the second
+Returns a collection of the raw channel data for the specified Xilog logger.
 
 ##### Signature
   1. Endpoint
@@ -65,3 +65,42 @@ fetch(path).then(function(response) {
 ```
 
 <br />
+
+## getheader(siteID, channelID, token)
+
+##### Purpose
+Returns the meta data associated with the Xilog logger data channel.
+
+##### Signature
+  1. Endpoint
+    - http://api.primayer.com/api/xilog/getheader
+  2. Params
+    - siteID: (string - required)
+      - logger site id as displayed on device.
+    - channelID: (string - required)
+      - specifies loggers channel.  
+    - token: (string - required)
+      - api authorization token.
+      
+##### Return Value
+  An object containing meta data for channel:
+
+```javascript
+{
+   Type: string,
+   ReadingsType: string,
+   Units: string,
+   Interval: number
+}
+```
+
+##### Example
+
+```javascript
+const path = 'http://api.primayer.com/api/xilog/getheader?siteID=serial_number&channelID=channel_index&token=token'
+
+fetch(path).then(function(response) {
+    console.log(response)
+    // {Type: '', ReadingsType: '', Units: '', Interval: '']
+})
+```
