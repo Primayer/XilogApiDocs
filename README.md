@@ -4,7 +4,7 @@ Questions? Find us at [@primayer](http://www.primayer.com/enquiry-form)
 
 # Xilog Data Access
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+The Primayer API provides access to the raw data recorded by the Xilog logger. To use the API third parties must provide an authorization token with each request. The authorization token can be found within the settings section of [PrimeWeb](http://cloud.primayer.com). 
 
 # Methods
 
@@ -60,6 +60,7 @@ const path = 'http://api.primayer.com/api/xilog/getdata?siteID=serial_number&cha
 
 fetch(path).then(function(response) {
     console.log(response)
+    // [{Timestamp: "01/10/2015 09:00:00", Value: 11000.0000}, {Timestamp: "01/10/2015 09:10:00", Value: 11089.0000}, {Timestamp: "01/10/2015 09:20:00", Value: 11780.0000}...]
 })
 ```
 
