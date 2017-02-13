@@ -15,39 +15,52 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac tu
 
 # API
 
-#### For more in depth examples of the API, see the [`examples`](examples) folder.
+#### For more in depth C# and JavaScript examples of the API, see the [`examples`](examples) folder.
 
-## getdata(siteId, channelID, token, startDate, endDate, timeWindowStart, timeWindowEnd)
+## getdata(siteID, channelID, token, startDate, endDate, timeWindowStart, timeWindowEnd)
 
 ##### Purpose
 Accepts a firebase configuration object as the first argument and an optional 'name' for the app as the second
 
-##### Arguments
-  1. configuration
-    - type: object
-    - properties:
-      - apiKey (string - required) your firebase API key
-      - authDomain (string - required) your firebase auth domain
-      - databaseURL (string - required) your firebase database root URL
-      - storageBucket (string - optional) your firebase storage bucket
-      - messagingSenderId: (string - optional) your firebase messaging sender id
-  2. app name
-    - type: string (optional, defaults to '[DEFAULT]')
+##### Signature
+  1. Endpoint
+    - http://api.primayer.com/api/xilog/getdata
+  2. Params
+    - siteID: (string - required)
+      - logger site id as displayed on device.
+    - channelID: (string - required)
+      - specifies which channel's data should be returned.  
+    - token: (string - required)
+      - api authorization token.
+    - startDate: (string - optional)
+      - Date at which to start querying loggers channel data.
+    - endDate: (string - optional)
+      - Date at which to finish querying loggers channel data.
+    - timeWindowStart: (string - optional)
+      - Time at which to start querying loggers channel data.
+    - timeWindowEnd: (string - optional)
+      - Time at which to finish querying loggers channel data.
+      
 
 ##### Return Value
-  An instance of re-base.
+  An object which contains an array of the loggers channel data:
+
+```javascript
+[{
+  Timestamp: string,
+  Value: number
+}]
+```
+
 
 ##### Example
 
 ```javascript
-var Rebase = require('re-base');
-var base = Rebase.createClass({
-      apiKey: "apiKey",
-      authDomain: "projectId.firebaseapp.com",
-      databaseURL: "https://databaseName.firebaseio.com",
-      storageBucket: "bucket.appspot.com",
-      messagingSenderId: "xxxxxxxxxxxxxx"
-}, 'myApp');
+const path = 'http://api.primayer.com/api/xilog/getdata?siteID=serial_number&channelID=channel_index&token=token&startDate=s_date&endDate=e_date&timeWindowStart=s_time&timeWindowEnd=f_time'
+
+fetch(path).then(function(response) {
+    console.log(response)
+})
 ```
 
 <br />
