@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="WpfApplication.Views.PageTwo"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApplication.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="300">
+
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="GET HEADER" Margin="0,50,0,50"/>
+            <WrapPanel>
+                <Label Content="SiteId"/>
+                <TextBox Text="{Binding Logger}" Width="200" Margin="40,0,0,0"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="Channel Index"/>
+                <TextBox Text="{Binding Channel}" Width="50" Margin="10,0,0,0"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="Token"/>
+                <TextBox Text="{Binding Token}" Width="200" Margin="40,0,0,0"/>
+            </WrapPanel>
+            <Button HorizontalAlignment="Left" Margin="50,20,0,0" Command="{Binding Send.Command}">
+                <TextBlock Text="{Binding Send.DisplayName}" Foreground="White"/>
+            </Button>
+            <TextBlock Text ="{Binding Result}" Margin="10,20,0,0"></TextBlock>
+        </StackPanel>
+    </Grid>
+</UserControl>
