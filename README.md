@@ -143,3 +143,46 @@ fetch(path).then(function(response) {
     // [{Timestamp: "01/10/2015 09:00:00", Value: 11000.0000}, {Timestamp: "01/10/2015 09:10:00", Value: 11089.0000}, {Timestamp: "01/10/2015 09:20:00", Value: 11780.0000}...]
 })
 ```
+
+<br />
+
+## confirmdownload(siteID, channelID, token, lastDateTime, downloadSuccess)
+
+##### Purpose
+Returns the current status of the loggers channel.
+
+##### Signature
+  1. Endpoint
+    - http://api.primayer.com/api/xilog/confirmdownload
+  2. Params
+    - siteID: (string - required)
+      - logger site id as displayed on device.
+    - channelID: (string - required)
+      - specifies loggers channel.  
+    - token: (string - required)
+      - api authorization token.
+    - lastDateTime: (string - required)
+      - UK formatted string MM/dd/yyyy
+    - downloadSuccess: (bool - required)
+ 
+##### Return Value
+  A status object for the loggers channel data:
+
+```javascript
+[{
+  ErrorCode: string,
+  ErrorDescription: string,
+  Success: bool
+}]
+```
+
+##### Example
+
+```javascript
+const path = 'http://api.primayer.com/api/xilog/confirmdownload?siteID=serial_number&channelID=channel_index&token=token&lastDateTime=lastDateTime&downloadSuccess=downloadSuccess'
+
+fetch(path).then(function(response) {
+    console.log(response)
+    // {ErrorCode: "403", ErrorDescription: 'Not allowed', Success: false }
+})
+```
