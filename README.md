@@ -104,3 +104,42 @@ fetch(path).then(function(response) {
     // {Type: '', ReadingsType: '', Units: '', Interval: '']
 })
 ```
+
+<br />
+
+## getnewdata(siteID, channelID, token)
+
+##### Purpose
+Returns the last batch of data sent from the logger for the specified channel.
+
+##### Signature
+  1. Endpoint
+    - http://api.primayer.com/api/xilog/getnewdata
+  2. Params
+    - siteID: (string - required)
+      - logger site id as displayed on device.
+    - channelID: (string - required)
+      - specifies loggers channel.  
+    - token: (string - required)
+      - api authorization token.
+
+
+##### Return Value
+  An object which contains an array of the loggers channel data:
+
+```javascript
+[{
+  Timestamp: string,
+  Value: number
+}]
+```
+##### Example
+
+```javascript
+const path = 'http://api.primayer.com/api/xilog/getnewdata?siteID=serial_number&channelID=channel_index&token=token'
+
+fetch(path).then(function(response) {
+    console.log(response)
+    // [{Timestamp: "01/10/2015 09:00:00", Value: 11000.0000}, {Timestamp: "01/10/2015 09:10:00", Value: 11089.0000}, {Timestamp: "01/10/2015 09:20:00", Value: 11780.0000}...]
+})
+```
