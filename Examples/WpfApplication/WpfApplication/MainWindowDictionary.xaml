@@ -35,4 +35,16 @@
         <view:PageFour/>
     </DataTemplate>
     
+    <DataTemplate DataType="{x:Type vm:PageFiveViewModel}">
+        <view:PageFive/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:PageSixViewModel}">
+        <view:PageSix/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:PageSevenViewModel}">
+        <view:PageSeven/>
+    </DataTemplate>
+
 </ResourceDictionary>

@@ -59,10 +59,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModels\Helpers.cs" />
     <Compile Include="ViewModels\HomePageViewModel.cs" />
     <Compile Include="ViewModels\MainMenu.cs" />
     <Compile Include="ViewModels\PageFourViewModel.cs" />
+    <Compile Include="ViewModels\PageSevenViewModel.cs" />
+    <Compile Include="ViewModels\PageSixViewModel.cs" />
     <Compile Include="ViewModels\PageThreeViewModel.cs" />
+    <Compile Include="ViewModels\PageFiveViewModel.cs" />
     <Compile Include="ViewModels\PageTwoViewModel.cs" />
     <Compile Include="ViewModels\PageOneViewModel.cs" />
     <Compile Include="ViewModels\WorkspaceViewModel.cs" />
@@ -75,11 +79,20 @@
     <Compile Include="Views\PageFour.xaml.cs">
       <DependentUpon>PageFour.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\PageFive.xaml.cs">
+      <DependentUpon>PageFive.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PageSix.xaml.cs">
+      <DependentUpon>PageSix.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\PageOne.xaml.cs">
       <DependentUpon>PageOne.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PageThree.xaml.cs">
       <DependentUpon>PageThree.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PageSeven.xaml.cs">
+      <DependentUpon>PageSeven.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PageTwo.xaml.cs">
       <DependentUpon>PageTwo.xaml</DependentUpon>
@@ -130,6 +143,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\PageFive.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PageSix.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\PageOne.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -137,6 +158,10 @@
     <Page Include="Views\PageThree.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PageSeven.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\PageTwo.xaml">
       <SubType>Designer</SubType>
