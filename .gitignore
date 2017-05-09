@@ -1,2 +1,6 @@
 /Examples/WpfApplication/WpfApplication/bin
 obj
+
+# VS Code, V Studio
+.vscode
+.vs
