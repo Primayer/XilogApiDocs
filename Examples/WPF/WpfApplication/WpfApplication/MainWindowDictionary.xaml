@@ -1,0 +1,50 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WpfApplication"
+                    xmlns:mvvm="clr-namespace:MVVM;assembly=MVVM"
+                    xmlns:view="clr-namespace:WpfApplication.Views"
+                    xmlns:app="clr-namespace:WpfApplication.Applications"
+                    xmlns:vm="clr-namespace:WpfApplication.ViewModels">
+
+
+    <DataTemplate DataType="{x:Type app:Shell}">
+        <view:Shell/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:MainMenu}">
+        <view:MainMenu/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:HomePageViewModel}">
+        <view:HomePage/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:PageOneViewModel}">
+        <view:PageOne/>
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type vm:PageTwoViewModel}">
+        <view:PageTwo/>
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type vm:PageThreeViewModel}">
+        <view:PageThree/>
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type vm:PageFourViewModel}">
+        <view:PageFour/>
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type vm:PageFiveViewModel}">
+        <view:PageFive/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:PageSixViewModel}">
+        <view:PageSix/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:PageSevenViewModel}">
+        <view:PageSeven/>
+    </DataTemplate>
+
+</ResourceDictionary>
