@@ -47,4 +47,8 @@
         <view:PageSeven/>
     </DataTemplate>
 
+    <DataTemplate DataType="{x:Type vm:PageEightViewModel}">
+        <view:PageEight/>
+    </DataTemplate>
+
 </ResourceDictionary>

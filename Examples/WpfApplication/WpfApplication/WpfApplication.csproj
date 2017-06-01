@@ -62,6 +62,7 @@
     <Compile Include="ViewModels\Helpers.cs" />
     <Compile Include="ViewModels\HomePageViewModel.cs" />
     <Compile Include="ViewModels\MainMenu.cs" />
+    <Compile Include="ViewModels\PageEightViewModel.cs" />
     <Compile Include="ViewModels\PageFourViewModel.cs" />
     <Compile Include="ViewModels\PageSevenViewModel.cs" />
     <Compile Include="ViewModels\PageSixViewModel.cs" />
@@ -81,6 +82,9 @@
     </Compile>
     <Compile Include="Views\PageFive.xaml.cs">
       <DependentUpon>PageFive.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PageEight.xaml.cs">
+      <DependentUpon>PageEight.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PageSix.xaml.cs">
       <DependentUpon>PageSix.xaml</DependentUpon>
@@ -144,6 +148,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\PageFive.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PageEight.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

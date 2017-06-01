@@ -15,6 +15,8 @@ The Primayer API provides access to the raw data recorded by the Xilog logger. T
 - [*getheader*](#getheadersiteid-channelid-token): Returns header data for logger channel.
 - [*getnewdata*](#getnewdatasiteid-channelid-token): Returns last batch of channel data sent from logger.
 - [*confirmdownload*](#confirmdownloadsiteid-channelid-token-lastdatetime-downloadsuccess): Returns the status code of last transaction sent from logger.
+- [*getmeter*](#getdatasiteid-channelid-token-startdate-enddate-timewindowstart-timewindowend): Returns meter data for logger channel specified by date time range. (live 05 Jun 17)
+- [*getnewmeter*](#getnewdatasiteid-channelid-token): Returns last batch of channel meter data sent from logger. (live 05 Jun 17)
 
 # API
 
@@ -275,5 +277,91 @@ const path = 'http://api.primayer.com/api/xilog/confirmdownload?siteID=serial_nu
 fetch(path).then(function(response) {
     console.log(response)
     // {ErrorCode: "403", ErrorDescription: 'Not allowed', Success: false }
+})
+```
+<br />
+
+## getmeter(siteID, channelID, token, startDate, endDate, timeWindowStart, timeWindowEnd)
+
+##### Purpose
+Returns a collection of the raw channel meter data for the specified Xilog logger.
+
+##### Signature
+  1. Endpoint
+    - http://api.primayer.com/api/xilog/getmeter
+  2. Params
+    - siteID: (string - required)
+      - logger site id as displayed on device.
+    - channelID: (string - required)
+      - specifies which channel's data should be returned.  
+    - token: (string - required)
+      - api authorization token.
+    - startDate: (string - optional)
+      - Date at which to start querying loggers channel data.
+    - endDate: (string - optional)
+      - Date at which to finish querying loggers channel data.
+    - timeWindowStart: (string - optional)
+      - Time at which to start querying loggers channel data.
+    - timeWindowEnd: (string - optional)
+      - Time at which to finish querying loggers channel data.
+      
+
+##### Return Value
+  An object which contains an array of the loggers channel data:
+
+```javascript
+[{
+  Timestamp: string,
+  Value: number
+}]
+```
+
+
+##### Example
+
+```javascript
+const path = 'http://api.primayer.com/api/xilog/getmeter?siteID=serial_number&channelID=channel_index&token=token&startDate=s_date&endDate=e_date&timeWindowStart=s_time&timeWindowEnd=f_time'
+
+fetch(path).then(function(response) {
+    console.log(response)
+    // [{Timestamp: "01/10/2015 00:00:00", Value: 1100000.0000}, {Timestamp: "02/10/2015 00:00:00", Value: 1200000.0000}...]
+})
+```
+<br />
+
+## getnewmeter(siteID, channelID, token)
+
+##### Purpose
+Returns the last batch of meter data sent from the logger for the specified channel.
+
+##### Signature
+  1. Endpoint
+    - http://api.primayer.com/api/xilog/getnewmeter
+  2. Params
+    - siteID: (string - required)
+      - logger site id as displayed on device.
+    - channelID: (string - required)
+      - specifies loggers channel.  
+    - token: (string - required)
+      - api authorization token.
+
+
+##### Return Value
+  An object which contains an array of the loggers channel data:
+
+```javascript
+[{
+  Timestamp: string,
+  Value: number
+}]
+```
+##### Example
+
+```javascript
+const path = 'http://api.primayer.com/api/xilog/getnewmeter?siteID=serial_number&channelID=channel_index&token=token'
+
+fetch(path).then(function(response) {
+    console.log(response)
+    // [{Timestamp: "01/10/2015 00:00:00", Value: 1100000.0000}, {Timestamp: "02/10/2015 00:00:00", Value: 1200000.0000}...]
 })
 ```

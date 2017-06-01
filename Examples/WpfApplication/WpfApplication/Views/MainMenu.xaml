@@ -54,7 +54,6 @@
                     <TextBlock Grid.Column="1" Text="Get Header" Margin="5,0,0,0" Foreground="White"/>
                 </Grid>
             </Button>
-
             <Button Command="{Binding MenuItem3}" VerticalAlignment="Top" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -74,6 +73,16 @@
                     <TextBlock Grid.Column="1" Text="Confirm Download" Margin="5,0,0,0" Foreground="White"/>
                 </Grid>
             </Button>
+            <Button Command="{Binding MenuItem8}" VerticalAlignment="Top" HorizontalAlignment="Stretch" HorizontalContentAlignment="Left">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="1" Text="Get Meter" Margin="5,0,0,0" Foreground="White"/>
+                </Grid>
+            </Button>
+         
         </StackPanel>
     </Grid>
 </UserControl>
