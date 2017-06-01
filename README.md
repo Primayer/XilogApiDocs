@@ -20,7 +20,7 @@ The Primayer API provides access to the raw data recorded by the Xilog logger. T
 
 # API
 
-#### For more in depth C# and JavaScript examples of the API, see the [`examples`](examples) folder.
+#### For more in depth C# and JavaScript examples of the API, see the examples folder.
 
 ## gettoken(username, password)
 
