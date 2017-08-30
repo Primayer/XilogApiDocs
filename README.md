@@ -1,6 +1,6 @@
 # Primayer Xilog API documentation
 
-Questions? Find us at [development@primayer.com](mailto:development@primayer.com)
+Questions? Find us at [development@primayer.com](mailto:development@primayer.co.uk)
 
 # Xilog Data Access
 
