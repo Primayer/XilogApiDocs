@@ -1,6 +1,6 @@
 # Primayer Xilog API documentation
 
-Questions? Find us at [development@primayer.com](mailto:development@primayer.com)
+Questions? Find us at [development@primayer.com](mailto:development@primayer.co.uk)
 
 # Xilog Data Access
 
@@ -125,9 +125,9 @@ Returns a collection of the raw channel data for the specified Xilog logger.
       - specifies which channel's data should be returned.  
     - token: (string - required)
       - api authorization token.
-    - startDate: (string - optional)
+    - startDate: (string - MM/dd/yyyy)
       - Date at which to start querying loggers channel data.
-    - endDate: (string - optional)
+    - endDate: (string -  MM/dd/yyyy)
       - Date at which to finish querying loggers channel data.
     - timeWindowStart: (string - optional)
       - Time at which to start querying loggers channel data.
@@ -296,9 +296,9 @@ Returns a collection of the raw channel meter data for the specified Xilog logge
       - specifies which channel's data should be returned.  
     - token: (string - required)
       - api authorization token.
-    - startDate: (string - optional)
+    - startDate: (string -  MM/dd/yyyy)
       - Date at which to start querying loggers channel data.
-    - endDate: (string - optional)
+    - endDate: (string -  MM/dd/yyyy)
       - Date at which to finish querying loggers channel data.
     - timeWindowStart: (string - optional)
       - Time at which to start querying loggers channel data.
