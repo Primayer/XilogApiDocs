@@ -124,7 +124,7 @@ namespace WpfApplication.ViewModels
 
         private void SendRequest()
         {
-            var request = WebRequest.Create(string.Format("http://api.primayer.com/api/xilog/confirmDownload?siteID={0}&channelID={1}&token={2}&lastDateTime={3}&downloadSuccess={4}", Logger, Channel, Token, StartDate.ToString("MM/dd/yyyy"), Success));
+            var request = WebRequest.Create(string.Format("http://decode.primayer.com/api/xilog/confirmDownload?siteID={0}&channelID={1}&token={2}&lastDateTime={3}&downloadSuccess={4}", Logger, Channel, Token, StartDate.ToString("MM/dd/yyyy"), Success));
             request.Credentials = CredentialCache.DefaultCredentials;
             request.Method = "GET";
             request.Timeout = System.Threading.Timeout.Infinite;

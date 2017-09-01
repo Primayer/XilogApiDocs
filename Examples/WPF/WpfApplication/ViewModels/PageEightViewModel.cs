@@ -113,7 +113,7 @@ namespace WpfApplication.ViewModels
 
         private void SendRequest()
         {
-            var request = WebRequest.Create(string.Format("http://api.primayer.com/api/xilog/getmeter?siteID={0}&channelID={1}&token={2}&startDate={3}&endDate={4}&timeWindowStart&timeWindowEnd", Logger, Channel, Token, StartDate.ToString("MM/dd/yyyy"), EndDate.ToString("MM/dd/yyyy")));
+            var request = WebRequest.Create(string.Format("http://decode.primayer.com/api/xilog/getmeter?siteID={0}&channelID={1}&token={2}&startDate={3}&endDate={4}&timeWindowStart&timeWindowEnd", Logger, Channel, Token, StartDate.ToString("MM/dd/yyyy"), EndDate.ToString("MM/dd/yyyy")));
             request.Credentials = CredentialCache.DefaultCredentials;
             request.Method = "GET";
             request.Timeout = System.Threading.Timeout.Infinite;
