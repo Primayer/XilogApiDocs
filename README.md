@@ -29,7 +29,7 @@ Returns the access token for the PrimeWeb user.
 
 ##### Signature
   1. Endpoint
-    - http://api.primayer.com/api/xilog/gettoken
+    - http://decode.primayer.com/api/xilog/gettoken
   2. Params
     - username: (string - required)
       - user
@@ -59,7 +59,7 @@ Returns array of site ids for the access token
 
 ##### Signature
   1. Endpoint
-    - http://api.primayer.com/api/xilog/getsites
+    - http://decode.primayer.com/api/xilog/getsites
   2. Params
     - token: (string - required)
       - access token    
@@ -87,7 +87,7 @@ Get all channel indexes associated with the logger
 
 ##### Signature
   1. Endpoint
-    - http://api.primayer.com/api/xilog/getchannels
+    - http://decode.primayer.com/api/xilog/getchannels
   2. Params
     - siteId: (string - required)
       - logger serial number
@@ -117,7 +117,7 @@ Returns a collection of the raw channel data for the specified Xilog logger.
 
 ##### Signature
   1. Endpoint
-    - http://api.primayer.com/api/xilog/getdata
+    - http://decode.primayer.com/api/xilog/getdata
   2. Params
     - siteID: (string - required)
       - logger site id as displayed on device.
@@ -166,7 +166,7 @@ Returns the meta data associated with the Xilog logger data channel.
 
 ##### Signature
   1. Endpoint
-    - http://api.primayer.com/api/xilog/getheader
+    - http://decode.primayer.com/api/xilog/getheader
   2. Params
     - siteID: (string - required)
       - logger site id as displayed on device.
@@ -207,7 +207,7 @@ Returns the last batch of data sent from the logger for the specified channel.
 
 ##### Signature
   1. Endpoint
-    - http://api.primayer.com/api/xilog/getnewdata
+    - http://decode.primayer.com/api/xilog/getnewdata
   2. Params
     - siteID: (string - required)
       - logger site id as displayed on device.
@@ -246,7 +246,7 @@ Returns the current status of the loggers channel.
 
 ##### Signature
   1. Endpoint
-    - http://api.primayer.com/api/xilog/confirmdownload
+    - http://decode.primayer.com/api/xilog/confirmdownload
   2. Params
     - siteID: (string - required)
       - logger site id as displayed on device.
@@ -288,7 +288,7 @@ Returns a collection of the raw channel meter data for the specified Xilog logge
 
 ##### Signature
   1. Endpoint
-    - http://api.primayer.com/api/xilog/getmeter
+    - http://decode.primayer.com/api/xilog/getmeter
   2. Params
     - siteID: (string - required)
       - logger site id as displayed on device.
@@ -336,7 +336,7 @@ Returns the last batch of meter data sent from the logger for the specified chan
 
 ##### Signature
   1. Endpoint
-    - http://api.primayer.com/api/xilog/getnewmeter
+    - http://decode.primayer.com/api/xilog/getnewmeter
   2. Params
     - siteID: (string - required)
       - logger site id as displayed on device.
