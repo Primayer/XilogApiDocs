@@ -129,10 +129,10 @@ Returns a collection of the raw channel data for the specified Xilog logger.
       - Date at which to start querying loggers channel data.
     - endDate: (string -  MM/dd/yyyy)
       - Date at which to finish querying loggers channel data.
-    - timeWindowStart: (string - optional)
-      - Time at which to start querying loggers channel data.
-    - timeWindowEnd: (string - optional)
-      - Time at which to finish querying loggers channel data.
+    - timeWindowStart: (string)
+      - Time at which to start querying loggers channel data. (can be empty)
+    - timeWindowEnd: (string)
+      - Time at which to finish querying loggers channel data. (can be empty)
       
 
 ##### Return Value
