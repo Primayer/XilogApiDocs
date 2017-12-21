@@ -42,7 +42,7 @@ Returns the access token for the PrimeWeb user.
 ##### Example
 
 ```javascript
-const path = 'http://api.primayer.com/api/xilog/gettoken?username=user&password=pass'
+const path = 'http://decode.primayer.com/api/xilog/gettoken?username=user&password=pass'
 
 fetch(path).then(function(response) {
     console.log(response)
@@ -70,7 +70,7 @@ Returns array of site ids for the access token
 ##### Example
 
 ```javascript
-const path = 'http://api.primayer.com/api/xilog/getsites?token=token'
+const path = 'http://decode.primayer.com/api/xilog/getsites?token=token'
 
 fetch(path).then(function(response) {
     console.log(response)
@@ -100,7 +100,7 @@ Get all channel indexes associated with the logger
 ##### Example
 
 ```javascript
-const path = 'http://api.primayer.com/api/xilog/getchannels?siteID=serial&token=token'
+const path = 'http://decode.primayer.com/api/xilog/getchannels?siteID=serial&token=token'
 
 fetch(path).then(function(response) {
     console.log(response)
@@ -149,7 +149,7 @@ Returns a collection of the raw channel data for the specified Xilog logger.
 ##### Example
 
 ```javascript
-const path = 'http://api.primayer.com/api/xilog/getdata?siteID=serial_number&channelID=channel_index&token=token&startDate=s_date&endDate=e_date&timeWindowStart=s_time&timeWindowEnd=f_time'
+const path = 'http://decode.primayer.com/api/xilog/getdata?siteID=serial_number&channelID=channel_index&token=token&startDate=s_date&endDate=e_date&timeWindowStart=s_time&timeWindowEnd=f_time'
 
 fetch(path).then(function(response) {
     console.log(response)
@@ -190,7 +190,7 @@ Returns the meta data associated with the Xilog logger data channel.
 ##### Example
 
 ```javascript
-const path = 'http://api.primayer.com/api/xilog/getheader?siteID=serial_number&channelID=channel_index&token=token'
+const path = 'http://decode.primayer.com/api/xilog/getheader?siteID=serial_number&channelID=channel_index&token=token'
 
 fetch(path).then(function(response) {
     console.log(response)
@@ -229,7 +229,7 @@ Returns the last batch of data sent from the logger for the specified channel.
 ##### Example
 
 ```javascript
-const path = 'http://api.primayer.com/api/xilog/getnewdata?siteID=serial_number&channelID=channel_index&token=token'
+const path = 'http://decode.primayer.com/api/xilog/getnewdata?siteID=serial_number&channelID=channel_index&token=token'
 
 fetch(path).then(function(response) {
     console.log(response)
@@ -272,7 +272,7 @@ Returns the current status of the loggers channel.
 ##### Example
 
 ```javascript
-const path = 'http://api.primayer.com/api/xilog/confirmdownload?siteID=serial_number&channelID=channel_index&token=token&lastDateTime=lastDateTime&downloadSuccess=downloadSuccess'
+const path = 'http://decode.primayer.com/api/xilog/confirmdownload?siteID=serial_number&channelID=channel_index&token=token&lastDateTime=lastDateTime&downloadSuccess=downloadSuccess'
 
 fetch(path).then(function(response) {
     console.log(response)
@@ -320,7 +320,7 @@ Returns a collection of the raw channel meter data for the specified Xilog logge
 ##### Example
 
 ```javascript
-const path = 'http://api.primayer.com/api/xilog/getmeter?siteID=serial_number&channelID=channel_index&token=token&startDate=s_date&endDate=e_date&timeWindowStart=s_time&timeWindowEnd=f_time'
+const path = 'http://decode.primayer.com/api/xilog/getmeter?siteID=serial_number&channelID=channel_index&token=token&startDate=s_date&endDate=e_date&timeWindowStart=s_time&timeWindowEnd=f_time'
 
 fetch(path).then(function(response) {
     console.log(response)
@@ -358,7 +358,7 @@ Returns the last batch of meter data sent from the logger for the specified chan
 ##### Example
 
 ```javascript
-const path = 'http://api.primayer.com/api/xilog/getnewmeter?siteID=serial_number&channelID=channel_index&token=token'
+const path = 'http://decode.primayer.com/api/xilog/getnewmeter?siteID=serial_number&channelID=channel_index&token=token'
 
 fetch(path).then(function(response) {
     console.log(response)
