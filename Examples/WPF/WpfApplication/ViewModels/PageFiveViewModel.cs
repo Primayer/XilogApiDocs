@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 
 namespace WpfApplication.ViewModels
 {
+
+//Method no longer in use, log into primeweb to get your access token
     class PageFiveViewModel : WorkspaceViewModel
     {
         public string Username
