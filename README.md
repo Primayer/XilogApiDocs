@@ -8,7 +8,6 @@ The Primayer API provides access to the raw data recorded by the Xilog logger. T
 
 # Methods
 
-- [*gettoken*](#gettokenusername-password): Returns access token for PrimeWeb user
 - [*getsites*](#getsitestoken): Returns all sites for the access token
 - [*getchannels*](#getchannelssiteid-token): Returns all channels for site
 - [*getdata*](#getdatasiteid-channelid-token-startdate-enddate-timewindowstart-timewindowend): Returns data for logger channel specified by date time range.
@@ -21,36 +20,6 @@ The Primayer API provides access to the raw data recorded by the Xilog logger. T
 # API
 
 #### For more in depth C# and JavaScript examples of the API, see the examples folder.
-
-## gettoken(username, password)
-
-##### Purpose
-Returns the access token for the PrimeWeb user.
-
-##### Signature
-  1. Endpoint
-    - http://decode.primayer.com/api/xilog/gettoken
-  2. Params
-    - username: (string - required)
-      - user
-    - password: (string - required)
-      - pass  
-      
-##### Return Value
-  A string:
-
-##### Example
-
-```javascript
-const path = 'http://decode.primayer.com/api/xilog/gettoken?username=user&password=pass'
-
-fetch(path).then(function(response) {
-    console.log(response)
-    // 00000000-0000-0000-0000-000000000000
-})
-```
-
-<br />
 
 ## getsites(token)
 
