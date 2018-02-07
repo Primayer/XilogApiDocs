@@ -152,7 +152,8 @@ Returns the meta data associated with the Xilog logger data channel.
    Type: string,
    ReadingsType: string,
    Units: string,
-   Interval: number
+   Interval: number,
+   SiteName : string
 }
 ```
 
@@ -163,7 +164,7 @@ const path = 'http://decode.primayer.com/api/xilog/getheader?siteID=serial_numbe
 
 fetch(path).then(function(response) {
     console.log(response)
-    // {Type: '', ReadingsType: '', Units: '', Interval: '']
+    // {Type: '', ReadingsType: '', Units: '', Interval: '', SiteName: '']
 })
 ```
 
