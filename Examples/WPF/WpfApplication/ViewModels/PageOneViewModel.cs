@@ -100,9 +100,9 @@ namespace WpfApplication.ViewModels
         {
             Logger = "998815";
             Channel = "D1a";
-            Token = "884bd453-b4a0-44ef-9af5-8f7cc7e587c8";
-            StartDate = new DateTime(2016, 5, 30);
-            EndDate = new DateTime(2016, 5, 31);
+            Token = "d408db70-57f0-4235-97e9-9ed9f86646b0";
+            StartDate = new DateTime(2019, 1, 1);
+            EndDate = new DateTime(2019, 1, 2);
             Send = new CommandViewModel
             {
                 DisplayName = "Send",

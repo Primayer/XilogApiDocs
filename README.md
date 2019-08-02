@@ -16,6 +16,7 @@ The Primayer API provides access to the raw data recorded by the Xilog logger. T
 - [*confirmdownload*](#confirmdownloadsiteid-channelid-token-lastdatetime-downloadsuccess): Returns the status code of last transaction sent from logger.
 - [*getmeter*](#getmetersiteid-channelid-token-startdate-enddate-timewindowstart-timewindowend): Returns meter data for logger channel specified by date time range.
 - [*getnewmeter*](#getnewmetersiteid-channelid-token): Returns last batch of channel meter data sent from logger.
+- [*getminmax*](#getminmaxsiteid-channelid-token-startdate-enddate): Returns the min/max values for a logger channel specified by date time range.
 
 # API
 
@@ -164,7 +165,7 @@ const path = 'http://decode.primayer.com/api/xilog/getheader?siteID=serial_numbe
 
 fetch(path).then(function(response) {
     console.log(response)
-    // {Type: '', ReadingsType: '', Units: '', Interval: '', SiteName: '']
+    // {Type: '', ReadingsType: '', Units: '', Interval: '', SiteName: ''}
 })
 ```
 
@@ -333,5 +334,54 @@ const path = 'http://decode.primayer.com/api/xilog/getnewmeter?siteID=serial_num
 fetch(path).then(function(response) {
     console.log(response)
     // [{Timestamp: "01/10/2015 00:00:00", Value: 1100000.0000}, {Timestamp: "02/10/2015 00:00:00", Value: 1200000.0000}...]
+})
+```
+<br />
+
+## getminmax(siteID, channelID, token, startDate, endDate)
+
+##### Purpose
+Returns an object which contains the min/max values for a specified Xilog logger/channel.
+
+##### Signature
+  1. Endpoint
+    - http://decode.primayer.com/api/xilog/getminmax
+  2. Params
+    - siteID: (string - required)
+      - logger site id as displayed on device.
+    - channelID: (string - required)
+      - specifies which channel's data should be returned.  
+    - token: (string - required)
+      - api authorization token.
+    - startDate: (string - MM/dd/yyyy)
+      - Date at which to start querying loggers channel data.
+    - endDate: (string -  MM/dd/yyyy)
+      - Date at which to finish querying loggers channel data.
+      
+
+##### Return Value
+  An object which contains min/max data:
+
+```javascript
+[{
+  Serial: integer,
+  Channel: string,
+  StartRange: string,
+  EndRange: string,
+  Min: number,
+  Max: number,
+  Error: string
+}]
+```
+
+
+##### Example
+
+```javascript
+const path = 'http://decode.primayer.com/api/xilog/getminmax?siteID=serial_number&channelID=channel_index&token=token&startDate=s_date&endDate=e_date'
+
+fetch(path).then(function(response) {
+    console.log(response)
+    // {Serial: 998815, Channel: 'D1a', StartRange: '2019-01-01T00:00:00', EndRange: '2019-01-02T00:00:00', Min: 0,  Max: 1.99595,  Error: '-'}
 })
 ```
