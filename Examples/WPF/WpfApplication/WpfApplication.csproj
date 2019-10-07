@@ -67,6 +67,7 @@
     <Compile Include="ViewModels\PageNineViewModel.cs" />
     <Compile Include="ViewModels\PageSevenViewModel.cs" />
     <Compile Include="ViewModels\PageSixViewModel.cs" />
+    <Compile Include="ViewModels\PageTenViewModel.cs" />
     <Compile Include="ViewModels\PageThreeViewModel.cs" />
     <Compile Include="ViewModels\PageFiveViewModel.cs" />
     <Compile Include="ViewModels\PageTwoViewModel.cs" />
@@ -95,6 +96,9 @@
     </Compile>
     <Compile Include="Views\PageOne.xaml.cs">
       <DependentUpon>PageOne.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PageTen.xaml.cs">
+      <DependentUpon>PageTen.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PageThree.xaml.cs">
       <DependentUpon>PageThree.xaml</DependentUpon>
@@ -168,6 +172,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\PageOne.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PageTen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

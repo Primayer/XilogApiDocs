@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="WpfApplication.Views.PageNine"
+﻿<UserControl x:Class="WpfApplication.Views.PageTen"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -8,7 +8,7 @@
       d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <StackPanel>
-            <TextBlock Text="GET MINMAX" Margin="0,50,0,50"/>
+            <TextBlock Text="GET DATA TO UNITS" Margin="0,50,0,50"/>
             <WrapPanel>
                 <Label Content="SiteId"/>
                 <TextBox Text="{Binding Logger}" Width="200" Margin="40,0,0,0"/>
@@ -27,7 +27,11 @@
             </WrapPanel>
             <WrapPanel>
                 <Label Content="End"/>
-                <DatePicker SelectedDate="{Binding EndDate}" Margin="57,0,0,0"/>
+                <DatePicker SelectedDate="{Binding EndDate}" Margin="55,0,0,0"/>
+            </WrapPanel>
+            <WrapPanel>
+                <Label Content="Units"/>
+                <TextBox Text="{Binding Units}" Width="50" Margin="48,0,0,0"/>
             </WrapPanel>
             <Button HorizontalAlignment="Left" Margin="50,20,0,0" Command="{Binding Send.Command}">
                 <TextBlock Text="{Binding Send.DisplayName}" Foreground="White"/>

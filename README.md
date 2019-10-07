@@ -11,6 +11,7 @@ The Primayer API provides access to the raw data recorded by the Xilog logger. T
 - [*getsites*](#getsitestoken): Returns all sites for the access token
 - [*getchannels*](#getchannelssiteid-token): Returns all channels for site
 - [*getdata*](#getdatasiteid-channelid-token-startdate-enddate-timewindowstart-timewindowend): Returns data for logger channel specified by date time range.
+- [*getdatatounits*](#getdatatounitssiteid-channelid-token-startdate-enddate-units): Returns data converted to units, for logger channel specified by date time range.)
 - [*getheader*](#getheadersiteid-channelid-token): Returns header data for logger channel.
 - [*getnewdata*](#getnewdatasiteid-channelid-token): Returns last batch of channel data sent from logger.
 - [*confirmdownload*](#confirmdownloadsiteid-channelid-token-lastdatetime-downloadsuccess): Returns the status code of last transaction sent from logger.
@@ -120,6 +121,53 @@ Returns a collection of the raw channel data for the specified Xilog logger.
 
 ```javascript
 const path = 'http://decode.primayer.com/api/xilog/getdata?siteID=serial_number&channelID=channel_index&token=token&startDate=s_date&endDate=e_date&timeWindowStart=s_time&timeWindowEnd=f_time'
+
+fetch(path).then(function(response) {
+    console.log(response)
+    // [{Timestamp: "01/10/2015 09:00:00", Value: 11000.0000}, {Timestamp: "01/10/2015 09:10:00", Value: 11089.0000}, {Timestamp: "01/10/2015 09:20:00", Value: 11780.0000}...]
+})
+```
+
+<br />
+
+## getdatatounits(siteID, channelID, token, startDate, endDate, units)
+
+##### Purpose
+Returns a collection of the  channel data for the specified Xilog logger converted to a specified unit.
+
+##### Signature
+  1. Endpoint
+    - http://decode.primayer.com/api/xilog/getdatatounits
+  2. Params
+    - siteID: (string - required)
+      - logger site id as displayed on device.
+    - channelID: (string - required)
+      - specifies which channel's data should be returned.  
+    - token: (string - required)
+      - api authorization token.
+    - startDate: (string - MM/dd/yyyy)
+      - Date at which to start querying loggers channel data.
+    - endDate: (string -  MM/dd/yyyy)
+      - Date at which to finish querying loggers channel data.
+    - units: (string)
+      - enumeration value of the unit (check examples for unit enumerations)
+      
+
+##### Return Value
+  An object which contains an array of the loggers channel data:
+
+```javascript
+[{
+  Timestamp: string,
+  Value: number
+}]
+```
+
+
+##### Example
+
+```javascript
+const path = 'http://decode.primayer.com/api/xilog/getdatatounits?siteID=serial_number&channelID=channel_index&token=token&startDate=s_date&endDate=e_date&units=u'
 
 fetch(path).then(function(response) {
     console.log(response)

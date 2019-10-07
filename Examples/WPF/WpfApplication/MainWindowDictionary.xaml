@@ -55,4 +55,8 @@
         <view:PageNine/>
     </DataTemplate>
 
+    <DataTemplate DataType="{x:Type vm:PageTenViewModel}">
+        <view:PageTen/>
+    </DataTemplate>
+
 </ResourceDictionary>

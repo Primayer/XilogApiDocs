@@ -115,6 +115,17 @@ namespace WpfApplication.ViewModels
         }
         RelayCommand m_MenuItem9 = default(RelayCommand);
 
+        public RelayCommand MenuItem10
+        {
+            get { return m_MenuItem10; }
+            set
+            {
+                m_MenuItem10 = value;
+                base.OnPropertyChanged(() => MenuItem10);
+            }
+        }
+        RelayCommand m_MenuItem10 = default(RelayCommand);
+
         public bool ButtonsEnabled
         {
             get
@@ -145,6 +156,7 @@ namespace WpfApplication.ViewModels
             MenuItem7 = new RelayCommand(p => Nav.Service.NavigateTo(new PageSevenViewModel()));
             MenuItem8 = new RelayCommand(p => Nav.Service.NavigateTo(new PageEightViewModel()));
             MenuItem9 = new RelayCommand(p => Nav.Service.NavigateTo(new PageNineViewModel()));
+            MenuItem10 = new RelayCommand(p => Nav.Service.NavigateTo(new PageTenViewModel()));
 
             ButtonsEnabled = true;
         }
