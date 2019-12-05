@@ -4,7 +4,7 @@ Questions? Find us at [development@primayer.co.uk](mailto:development@primayer.c
 
 # Xilog Data Access
 
-The Primayer API provides access to the raw data recorded by the Xilog logger. To use the API third parties must provide an authorization token with each request. The authorization token can be found within the settings section of [PrimeWeb](http://cloud.primayer.com). 
+The Primayer API provides access to the raw data recorded by the Xilog logger. To use the API third parties must provide an authorization token with each request. The authorization token can be found within the settings section of [PrimeWeb](https://cloud.primayer.com). 
 
 # Methods
 
@@ -30,7 +30,7 @@ Returns array of site ids for the access token
 
 ##### Signature
   1. Endpoint
-    - http://decode.primayer.com/api/xilog/getsites
+    - https://decode.primayer.com/api/xilog/getsites
   2. Params
     - token: (string - required)
       - access token    
@@ -41,7 +41,7 @@ Returns array of site ids for the access token
 ##### Example
 
 ```javascript
-const path = 'http://decode.primayer.com/api/xilog/getsites?token=token'
+const path = 'https://decode.primayer.com/api/xilog/getsites?token=token'
 
 fetch(path).then(function(response) {
     console.log(response)
@@ -58,7 +58,7 @@ Get all channel indexes associated with the logger
 
 ##### Signature
   1. Endpoint
-    - http://decode.primayer.com/api/xilog/getchannels
+    - https://decode.primayer.com/api/xilog/getchannels
   2. Params
     - siteId: (string - required)
       - logger serial number
@@ -71,7 +71,7 @@ Get all channel indexes associated with the logger
 ##### Example
 
 ```javascript
-const path = 'http://decode.primayer.com/api/xilog/getchannels?siteID=serial&token=token'
+const path = 'https://decode.primayer.com/api/xilog/getchannels?siteID=serial&token=token'
 
 fetch(path).then(function(response) {
     console.log(response)
@@ -88,7 +88,7 @@ Returns a collection of the raw channel data for the specified Xilog logger.
 
 ##### Signature
   1. Endpoint
-    - http://decode.primayer.com/api/xilog/getdata
+    - https://decode.primayer.com/api/xilog/getdata
   2. Params
     - siteID: (string - required)
       - logger site id as displayed on device.
@@ -120,7 +120,7 @@ Returns a collection of the raw channel data for the specified Xilog logger.
 ##### Example
 
 ```javascript
-const path = 'http://decode.primayer.com/api/xilog/getdata?siteID=serial_number&channelID=channel_index&token=token&startDate=s_date&endDate=e_date&timeWindowStart=s_time&timeWindowEnd=f_time'
+const path = 'https://decode.primayer.com/api/xilog/getdata?siteID=serial_number&channelID=channel_index&token=token&startDate=s_date&endDate=e_date&timeWindowStart=s_time&timeWindowEnd=f_time'
 
 fetch(path).then(function(response) {
     console.log(response)
@@ -137,7 +137,7 @@ Returns a collection of the  channel data for the specified Xilog logger convert
 
 ##### Signature
   1. Endpoint
-    - http://decode.primayer.com/api/xilog/getdatatounits
+    - https://decode.primayer.com/api/xilog/getdatatounits
   2. Params
     - siteID: (string - required)
       - logger site id as displayed on device.
@@ -167,7 +167,7 @@ Returns a collection of the  channel data for the specified Xilog logger convert
 ##### Example
 
 ```javascript
-const path = 'http://decode.primayer.com/api/xilog/getdatatounits?siteID=serial_number&channelID=channel_index&token=token&startDate=s_date&endDate=e_date&units=u'
+const path = 'https://decode.primayer.com/api/xilog/getdatatounits?siteID=serial_number&channelID=channel_index&token=token&startDate=s_date&endDate=e_date&units=u'
 
 fetch(path).then(function(response) {
     console.log(response)
@@ -184,7 +184,7 @@ Returns the meta data associated with the Xilog logger data channel.
 
 ##### Signature
   1. Endpoint
-    - http://decode.primayer.com/api/xilog/getheader
+    - https://decode.primayer.com/api/xilog/getheader
   2. Params
     - siteID: (string - required)
       - logger site id as displayed on device.
@@ -209,7 +209,7 @@ Returns the meta data associated with the Xilog logger data channel.
 ##### Example
 
 ```javascript
-const path = 'http://decode.primayer.com/api/xilog/getheader?siteID=serial_number&channelID=channel_index&token=token'
+const path = 'https://decode.primayer.com/api/xilog/getheader?siteID=serial_number&channelID=channel_index&token=token'
 
 fetch(path).then(function(response) {
     console.log(response)
@@ -226,7 +226,7 @@ Returns the last batch of data sent from the logger for the specified channel.
 
 ##### Signature
   1. Endpoint
-    - http://decode.primayer.com/api/xilog/getnewdata
+    - https://decode.primayer.com/api/xilog/getnewdata
   2. Params
     - siteID: (string - required)
       - logger site id as displayed on device.
@@ -248,7 +248,7 @@ Returns the last batch of data sent from the logger for the specified channel.
 ##### Example
 
 ```javascript
-const path = 'http://decode.primayer.com/api/xilog/getnewdata?siteID=serial_number&channelID=channel_index&token=token'
+const path = 'https://decode.primayer.com/api/xilog/getnewdata?siteID=serial_number&channelID=channel_index&token=token'
 
 fetch(path).then(function(response) {
     console.log(response)
@@ -265,7 +265,7 @@ Returns the current status of the loggers channel.
 
 ##### Signature
   1. Endpoint
-    - http://decode.primayer.com/api/xilog/confirmdownload
+    - https://decode.primayer.com/api/xilog/confirmdownload
   2. Params
     - siteID: (string - required)
       - logger site id as displayed on device.
@@ -291,7 +291,7 @@ Returns the current status of the loggers channel.
 ##### Example
 
 ```javascript
-const path = 'http://decode.primayer.com/api/xilog/confirmdownload?siteID=serial_number&channelID=channel_index&token=token&lastDateTime=lastDateTime&downloadSuccess=downloadSuccess'
+const path = 'https://decode.primayer.com/api/xilog/confirmdownload?siteID=serial_number&channelID=channel_index&token=token&lastDateTime=lastDateTime&downloadSuccess=downloadSuccess'
 
 fetch(path).then(function(response) {
     console.log(response)
@@ -307,7 +307,7 @@ Returns a collection of the raw channel meter data for the specified Xilog logge
 
 ##### Signature
   1. Endpoint
-    - http://decode.primayer.com/api/xilog/getmeter
+    - https://decode.primayer.com/api/xilog/getmeter
   2. Params
     - siteID: (string - required)
       - logger site id as displayed on device.
@@ -339,7 +339,7 @@ Returns a collection of the raw channel meter data for the specified Xilog logge
 ##### Example
 
 ```javascript
-const path = 'http://decode.primayer.com/api/xilog/getmeter?siteID=serial_number&channelID=channel_index&token=token&startDate=s_date&endDate=e_date&timeWindowStart=s_time&timeWindowEnd=f_time'
+const path = 'https://decode.primayer.com/api/xilog/getmeter?siteID=serial_number&channelID=channel_index&token=token&startDate=s_date&endDate=e_date&timeWindowStart=s_time&timeWindowEnd=f_time'
 
 fetch(path).then(function(response) {
     console.log(response)
@@ -355,7 +355,7 @@ Returns the last batch of meter data sent from the logger for the specified chan
 
 ##### Signature
   1. Endpoint
-    - http://decode.primayer.com/api/xilog/getnewmeter
+    - https://decode.primayer.com/api/xilog/getnewmeter
   2. Params
     - siteID: (string - required)
       - logger site id as displayed on device.
@@ -377,7 +377,7 @@ Returns the last batch of meter data sent from the logger for the specified chan
 ##### Example
 
 ```javascript
-const path = 'http://decode.primayer.com/api/xilog/getnewmeter?siteID=serial_number&channelID=channel_index&token=token'
+const path = 'https://decode.primayer.com/api/xilog/getnewmeter?siteID=serial_number&channelID=channel_index&token=token'
 
 fetch(path).then(function(response) {
     console.log(response)
@@ -393,7 +393,7 @@ Returns an object which contains the min/max values for a specified Xilog logger
 
 ##### Signature
   1. Endpoint
-    - http://decode.primayer.com/api/xilog/getminmax
+    - https://decode.primayer.com/api/xilog/getminmax
   2. Params
     - siteID: (string - required)
       - logger site id as displayed on device.
@@ -426,7 +426,7 @@ Returns an object which contains the min/max values for a specified Xilog logger
 ##### Example
 
 ```javascript
-const path = 'http://decode.primayer.com/api/xilog/getminmax?siteID=serial_number&channelID=channel_index&token=token&startDate=s_date&endDate=e_date'
+const path = 'https://decode.primayer.com/api/xilog/getminmax?siteID=serial_number&channelID=channel_index&token=token&startDate=s_date&endDate=e_date'
 
 fetch(path).then(function(response) {
     console.log(response)

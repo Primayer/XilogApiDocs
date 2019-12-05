@@ -66,7 +66,7 @@ namespace WpfApplication.ViewModels
 
         private void SendRequest()
         {
-            var request = WebRequest.Create(string.Format("http://decode.primayer.com/api/xilog/getsites?token={0}", Token));
+            var request = WebRequest.Create(string.Format("https://decode.primayer.com/api/xilog/getsites?token={0}", Token));
             request.Credentials = CredentialCache.DefaultCredentials;
             request.Method = "GET";
             request.Timeout = System.Threading.Timeout.Infinite;
