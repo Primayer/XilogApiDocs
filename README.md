@@ -32,8 +32,8 @@ Returns array of site ids for the access token
   1. Endpoint
     - https://decode.primayer.com/api/xilog/getsites
   2. Params
-    - token: (string - required)
-      - access token    
+   - token: (string - required)
+      - access token
      
 ##### Return Value
   An array of integers:
@@ -60,9 +60,9 @@ Get all channel indexes associated with the logger
   1. Endpoint
     - https://decode.primayer.com/api/xilog/getchannels
   2. Params
-    - siteId: (string - required)
+   - siteId: (string - required)
       - logger serial number
-    - token: (string - required)
+   - token: (string - required)
       - access token    
      
 ##### Return Value
@@ -90,19 +90,19 @@ Returns a collection of the raw channel data for the specified Xilog logger. (Ma
   1. Endpoint
     - https://decode.primayer.com/api/xilog/getdata
   2. Params
-    - siteID: (string - required)
+   - siteID: (string - required)
       - logger site id as displayed on device.
-    - channelID: (string - required)
+   - channelID: (string - required)
       - specifies which channel's data should be returned.  
-    - token: (string - required)
+   - token: (string - required)
       - api authorization token.
-    - startDate: (string - MM/dd/yyyy)
+   - startDate: (string - MM/dd/yyyy)
       - Date at which to start querying loggers channel data.
-    - endDate: (string -  MM/dd/yyyy)
+   - endDate: (string -  MM/dd/yyyy)
       - Date at which to finish querying loggers channel data.
-    - timeWindowStart: (string)
+   - timeWindowStart: (string)
       - Time at which to start querying loggers channel data. (can be empty)
-    - timeWindowEnd: (string)
+   - timeWindowEnd: (string)
       - Time at which to finish querying loggers channel data. (can be empty)
       
 
@@ -139,17 +139,17 @@ Returns a collection of the channel data for the specified Xilog logger converte
   1. Endpoint
     - https://decode.primayer.com/api/xilog/getdatatounits
   2. Params
-    - siteID: (string - required)
+   - siteID: (string - required)
       - logger site id as displayed on device.
-    - channelID: (string - required)
+   - channelID: (string - required)
       - specifies which channel's data should be returned.  
-    - token: (string - required)
+   - token: (string - required)
       - api authorization token.
-    - startDate: (string - MM/dd/yyyy)
+   - startDate: (string - MM/dd/yyyy)
       - Date at which to start querying loggers channel data.
-    - endDate: (string -  MM/dd/yyyy)
+   - endDate: (string -  MM/dd/yyyy)
       - Date at which to finish querying loggers channel data.
-    - units: (string)
+   - units: (string)
       - enumeration value of the unit (check examples for unit enumerations)
       
 
@@ -186,11 +186,11 @@ Returns the meta data associated with the Xilog logger data channel.
   1. Endpoint
     - https://decode.primayer.com/api/xilog/getheader
   2. Params
-    - siteID: (string - required)
+   - siteID: (string - required)
       - logger site id as displayed on device.
-    - channelID: (string - required)
+   - channelID: (string - required)
       - specifies loggers channel.  
-    - token: (string - required)
+   - token: (string - required)
       - api authorization token.
       
 ##### Return Value
@@ -228,11 +228,11 @@ Returns the last batch of data sent from the logger for the specified channel.
   1. Endpoint
     - https://decode.primayer.com/api/xilog/getnewdata
   2. Params
-    - siteID: (string - required)
+   - siteID: (string - required)
       - logger site id as displayed on device.
-    - channelID: (string - required)
+   - channelID: (string - required)
       - specifies loggers channel.  
-    - token: (string - required)
+   - token: (string - required)
       - api authorization token.
 
 
@@ -267,15 +267,15 @@ Returns the current status of the loggers channel.
   1. Endpoint
     - https://decode.primayer.com/api/xilog/confirmdownload
   2. Params
-    - siteID: (string - required)
+   - siteID: (string - required)
       - logger site id as displayed on device.
-    - channelID: (string - required)
+   - channelID: (string - required)
       - specifies loggers channel.  
-    - token: (string - required)
+   - token: (string - required)
       - api authorization token.
-    - lastDateTime: (string - required)
-      - UK formatted string MM/dd/yyyy
-    - downloadSuccess: (bool - required)
+   - lastDateTime: (string -  MM/dd/yyyy)
+      - date of last confirmed download
+   - downloadSuccess: (bool - required)
  
 ##### Return Value
   A status object for the loggers channel data:
@@ -309,19 +309,19 @@ Returns a collection of the raw channel meter data for the specified Xilog logge
   1. Endpoint
     - https://decode.primayer.com/api/xilog/getmeter
   2. Params
-    - siteID: (string - required)
+   - siteID: (string - required)
       - logger site id as displayed on device.
-    - channelID: (string - required)
+   - channelID: (string - required)
       - specifies which channel's data should be returned.  
-    - token: (string - required)
+   - token: (string - required)
       - api authorization token.
-    - startDate: (string -  MM/dd/yyyy)
+   - startDate: (string -  MM/dd/yyyy)
       - Date at which to start querying loggers channel data.
-    - endDate: (string -  MM/dd/yyyy)
+   - endDate: (string -  MM/dd/yyyy)
       - Date at which to finish querying loggers channel data.
-    - timeWindowStart: (string - optional)
+   - timeWindowStart: (string - optional)
       - Time at which to start querying loggers channel data.
-    - timeWindowEnd: (string - optional)
+   - timeWindowEnd: (string - optional)
       - Time at which to finish querying loggers channel data.
       
 
@@ -357,11 +357,11 @@ Returns the last batch of meter data sent from the logger for the specified chan
   1. Endpoint
     - https://decode.primayer.com/api/xilog/getnewmeter
   2. Params
-    - siteID: (string - required)
+   - siteID: (string - required)
       - logger site id as displayed on device.
-    - channelID: (string - required)
+   - channelID: (string - required)
       - specifies loggers channel.  
-    - token: (string - required)
+   - token: (string - required)
       - api authorization token.
 
 
@@ -395,15 +395,15 @@ Returns an object which contains the min/max values for a specified Xilog logger
   1. Endpoint
     - https://decode.primayer.com/api/xilog/getminmax
   2. Params
-    - siteID: (string - required)
+   - siteID: (string - required)
       - logger site id as displayed on device.
-    - channelID: (string - required)
+   - channelID: (string - required)
       - specifies which channel's data should be returned.  
-    - token: (string - required)
+   - token: (string - required)
       - api authorization token.
-    - startDate: (string - MM/dd/yyyy)
+   - startDate: (string - MM/dd/yyyy)
       - Date at which to start querying loggers channel data.
-    - endDate: (string -  MM/dd/yyyy)
+   - endDate: (string -  MM/dd/yyyy)
       - Date at which to finish querying loggers channel data.
       
 
