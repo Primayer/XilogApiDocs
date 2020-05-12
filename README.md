@@ -84,7 +84,7 @@ fetch(path).then(function(response) {
 ## getdata(siteID, channelID, token, startDate, endDate, timeWindowStart, timeWindowEnd)
 
 ##### Purpose
-Returns a collection of the raw channel data for the specified Xilog logger.
+Returns a collection of the raw channel data for the specified Xilog logger. (Max 7 days)
 
 ##### Signature
   1. Endpoint
@@ -133,7 +133,7 @@ fetch(path).then(function(response) {
 ## getdatatounits(siteID, channelID, token, startDate, endDate, units)
 
 ##### Purpose
-Returns a collection of the  channel data for the specified Xilog logger converted to a specified unit.
+Returns a collection of the channel data for the specified Xilog logger converted to a specified unit. (Max 7 days)
 
 ##### Signature
   1. Endpoint
@@ -303,7 +303,7 @@ fetch(path).then(function(response) {
 ## getmeter(siteID, channelID, token, startDate, endDate, timeWindowStart, timeWindowEnd)
 
 ##### Purpose
-Returns a collection of the raw channel meter data for the specified Xilog logger.
+Returns a collection of the raw channel meter data for the specified Xilog logger. (Max 7 days)
 
 ##### Signature
   1. Endpoint
@@ -389,7 +389,7 @@ fetch(path).then(function(response) {
 ## getminmax(siteID, channelID, token, startDate, endDate)
 
 ##### Purpose
-Returns an object which contains the min/max values for a specified Xilog logger/channel.
+Returns an object which contains the min/max values for a specified Xilog logger/channel. (Max 7 days)
 
 ##### Signature
   1. Endpoint
