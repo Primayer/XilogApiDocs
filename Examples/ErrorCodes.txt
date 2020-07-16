@@ -1,0 +1,20 @@
+ public enum ErrorCodes
+    {
+        Success = 0,
+        UnknownSiteID = 1,
+        UnknownChannelID = 2,
+        DateRange = 3,
+        Token = 4,
+        UnknownError = 99
+    }
+
+    public class ErrorContract
+    {
+        public ErrorCodes ErrorCode { get; set; }
+        public string ErrorDescription { get { return Enum.GetName(typeof(ErrorCodes), ErrorCode); } set { ; } }
+        public string AdditionalInfo { get; set; }
+        public bool Success()
+        {
+            return ErrorCode == ErrorCodes.Success;
+        }
+    }
