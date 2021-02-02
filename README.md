@@ -133,7 +133,7 @@ fetch(path).then(function(response) {
 ## getdatatounits(siteID, channelID, token, startDate, endDate, units)
 
 ##### Purpose
-Returns a collection of the channel data for the specified Xilog logger converted to a specified unit. (Max 7 days)
+Returns a collection of the channel data for the specified Xilog logger converted to a specified unit. (Max 8 days)
 
 ##### Signature
   1. Endpoint
